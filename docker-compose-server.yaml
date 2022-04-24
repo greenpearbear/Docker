@@ -2,20 +2,18 @@ version: "3.9"
 
 services:
   api:
-    build:
-      context: .
     image: greenpearbear/skypro_docker_rdmitirev
     ports:
       - 80:80
+    working_dir: /code
     volumes:
-      - ./code/data
+      - ./:/code/data
     depends_on:
       pg:
         condition: service_healthy
   pg:
     image: postgres:latest
     environment:
-      POSTGRES_USER: user_docker
       POSTGRES_PASSWORD: user_docker_pass
       POSTGRES_DB: docker_postgres_db
     healthcheck:

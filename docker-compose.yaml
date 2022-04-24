@@ -4,6 +4,7 @@ services:
   api:
     build:
       context: .
+    image: greenpearbear/skypro_docker_rdmitirev
     ports:
       - 80:80
     volumes:

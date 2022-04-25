@@ -28,5 +28,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: "Docker/docker-compose.yaml"
-          target: "/docker/"
+          target: "./docker/"
           strip_components: 1

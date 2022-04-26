@@ -2,7 +2,7 @@ name: Python check
 
 on: [push]
 jobs:
-  build:
+  flake_and_black_check:
     runs-on: ubuntu-latest
     steps:
     - name: clone code
